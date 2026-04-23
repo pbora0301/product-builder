@@ -13,6 +13,33 @@ const words = [
 
 const getWordsBtn = document.getElementById("get-words-btn");
 const wordList = document.getElementById("word-list");
+const themeToggle = document.getElementById("theme-toggle");
+
+const THEME_STORAGE_KEY = "preferred-theme";
+
+function applyTheme(theme) {
+    const isDarkMode = theme === "dark";
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+    themeToggle.setAttribute("aria-pressed", String(isDarkMode));
+}
+
+function getInitialTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (savedTheme === "dark" || savedTheme === "light") {
+        return savedTheme;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+applyTheme(getInitialTheme());
+
+themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+});
 
 getWordsBtn.addEventListener("click", () => {
     wordList.innerHTML = "";
