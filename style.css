@@ -150,7 +150,8 @@ p {
     text-align: left;
 }
 
-.contact-section h2 {
+.contact-section h2,
+.comments-section h2 {
     margin: 0 0 8px;
     font-size: 1.6rem;
     color: var(--text-color);
@@ -199,6 +200,21 @@ p {
 .submit-btn {
     justify-self: start;
     margin-bottom: 0;
+}
+
+.comments-section {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--panel-border);
+    text-align: left;
+}
+
+#disqus_thread {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 25px var(--shadow-color);
 }
 
 @media (max-width: 640px) {

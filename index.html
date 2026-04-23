@@ -32,7 +32,22 @@
                 <button type="submit" class="submit-btn">문의 보내기</button>
             </form>
         </section>
+        <section class="comments-section" aria-labelledby="comments-title">
+            <h2 id="comments-title">댓글</h2>
+            <p>단어 추천기에 대한 의견이나 공부 팁을 남겨주세요.</p>
+            <div id="disqus_thread"></div>
+        </section>
     </div>
     <script src="main.js"></script>
+    <script>
+        (function() {
+            var d = document;
+            var s = d.createElement("script");
+            s.src = "https://englishgame.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
 </body>
 </html>
