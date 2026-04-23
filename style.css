@@ -79,7 +79,8 @@ p {
 }
 
 #theme-toggle,
-#get-words-btn {
+#get-words-btn,
+.submit-btn {
     cursor: pointer;
     border-radius: 999px;
     border: none;
@@ -100,7 +101,8 @@ p {
     box-shadow: 0 10px 22px var(--shadow-color);
 }
 
-#get-words-btn {
+#get-words-btn,
+.submit-btn {
     background-color: var(--accent);
     color: #ffffff;
     padding: 15px 32px;
@@ -109,7 +111,8 @@ p {
     box-shadow: 0 10px 25px var(--accent-shadow);
 }
 
-#get-words-btn:hover {
+#get-words-btn:hover,
+.submit-btn:hover {
     background-color: var(--accent-hover);
     box-shadow: 0 16px 30px var(--accent-shadow);
     transform: translateY(-2px);
@@ -140,6 +143,64 @@ p {
     color: var(--muted-text);
 }
 
+.contact-section {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--panel-border);
+    text-align: left;
+}
+
+.contact-section h2 {
+    margin: 0 0 8px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid var(--toggle-border);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--muted-text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-shadow);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.submit-btn {
+    justify-self: start;
+    margin-bottom: 0;
+}
+
 @media (max-width: 640px) {
     .container {
         padding: 28px 20px;
@@ -152,5 +213,10 @@ p {
 
     #theme-toggle {
         width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-self: stretch;
     }
 }

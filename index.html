@@ -15,6 +15,23 @@
         <p>버튼을 누르면 아이엘츠 시험 준비에 도움이 되는 영단어 5개를 추천합니다.</p>
         <button id="get-words-btn">단어 추천받기</button>
         <div id="word-list"></div>
+        <section class="contact-section" aria-labelledby="contact-title">
+            <h2 id="contact-title">제휴 문의</h2>
+            <p>협업이나 제휴 제안이 있다면 아래 폼으로 내용을 보내주세요.</p>
+            <form class="contact-form" action="https://formspree.io/f/xykllbzn" method="POST">
+                <label for="partner-name">이름</label>
+                <input id="partner-name" name="name" type="text" placeholder="담당자 이름" required>
+
+                <label for="partner-email">이메일</label>
+                <input id="partner-email" name="email" type="email" placeholder="contact@example.com" required>
+
+                <label for="partner-message">문의 내용</label>
+                <textarea id="partner-message" name="message" rows="5" placeholder="제휴 내용과 연락처를 남겨주세요." required></textarea>
+
+                <input type="hidden" name="_subject" value="새 제휴 문의가 도착했습니다">
+                <button type="submit" class="submit-btn">문의 보내기</button>
+            </form>
+        </section>
     </div>
     <script src="main.js"></script>
 </body>
