@@ -669,6 +669,7 @@ p {
 .method-list strong,
 .method-list span {
     display: block;
+    grid-column: 2;
 }
 
 .method-list span {
