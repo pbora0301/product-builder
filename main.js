@@ -8,143 +8,158 @@ const resetQuizButton = document.getElementById("reset-quiz");
 const wordSets = [
     [
         {
-            word: "subtle",
-            pronunciation: "SUH-tl",
-            meaning: "미묘하지만 중요한",
-            example: "The report shows a subtle change in customer behavior.",
-            translation: "그 보고서는 고객 행동의 미묘한 변화를 보여준다.",
-            tip: "작지만 알아차릴 가치가 있는 차이를 말할 때 씁니다.",
+            word: "significant",
+            pronunciation: "sig-NIF-i-kunt",
+            meaning: "중요한, 상당한",
+            example: "The study found a significant rise in urban air pollution.",
+            translation: "그 연구는 도시 대기 오염의 상당한 증가를 발견했다.",
+            quiz: "A _____ number of students choose IELTS for university admission.",
+            tip: "IELTS Writing Task 1에서 변화의 크기나 의미를 설명할 때 자주 씁니다.",
             level: "B2"
         },
         {
-            word: "retain",
-            pronunciation: "ri-TAYN",
-            meaning: "유지하다, 보유하다",
-            example: "Short reviews help learners retain new vocabulary.",
-            translation: "짧은 복습은 학습자가 새 어휘를 유지하는 데 도움을 준다.",
-            tip: "keep보다 격식 있는 글에서 자주 보입니다.",
+            word: "factor",
+            pronunciation: "FAK-ter",
+            meaning: "요인, 요소",
+            example: "Cost is a major factor when families choose a city to live in.",
+            translation: "가족들이 살 도시를 선택할 때 비용은 주요 요인이다.",
+            quiz: "Public transport is one _____ that can reduce traffic congestion.",
+            tip: "원인과 영향을 분석하는 에세이에서 reason보다 객관적으로 들립니다.",
+            level: "B2"
+        },
+        {
+            word: "policy",
+            pronunciation: "POL-uh-see",
+            meaning: "정책, 방침",
+            example: "The government introduced a new policy to support renewable energy.",
+            translation: "정부는 재생 에너지를 지원하기 위한 새 정책을 도입했다.",
+            quiz: "A clear environmental _____ can encourage companies to cut waste.",
+            tip: "정부, 학교, 회사의 공식적인 계획이나 방침을 말할 때 씁니다.",
+            level: "B2"
+        },
+        {
+            word: "benefit",
+            pronunciation: "BEN-uh-fit",
+            meaning: "이점, 혜택을 주다",
+            example: "Online courses can benefit people who live far from colleges.",
+            translation: "온라인 강의는 대학에서 멀리 사는 사람들에게 도움이 될 수 있다.",
+            quiz: "One clear _____ of public parks is that they improve community health.",
+            tip: "Task 2에서 장점이나 긍정적 결과를 말할 때 명사와 동사로 모두 씁니다.",
             level: "B1"
         },
         {
-            word: "context",
-            pronunciation: "KON-tekst",
-            meaning: "문맥, 상황",
-            example: "A word becomes clearer when you read it in context.",
-            translation: "단어는 문맥 속에서 읽을 때 더 분명해진다.",
-            tip: "단어 뜻이 하나로 고정되지 않을 때 확인해야 하는 기준입니다.",
-            level: "B1"
-        },
-        {
-            word: "reliable",
-            pronunciation: "ri-LY-uh-bl",
-            meaning: "믿을 수 있는",
-            example: "A reliable routine is better than a perfect plan.",
-            translation: "믿고 지속할 수 있는 루틴은 완벽한 계획보다 낫다.",
-            tip: "사람, 정보, 시스템 모두에 사용할 수 있습니다.",
-            level: "B1"
-        },
-        {
-            word: "clarify",
-            pronunciation: "KLAIR-uh-fy",
-            meaning: "명확히 하다",
-            example: "The teacher clarified the difference between the two words.",
-            translation: "선생님은 두 단어의 차이를 명확히 설명했다.",
-            tip: "explain보다 '흐린 것을 분명하게 만든다'는 느낌이 강합니다.",
+            word: "approach",
+            pronunciation: "uh-PROHCH",
+            meaning: "접근법, 접근하다",
+            example: "A balanced approach is needed to solve housing problems.",
+            translation: "주거 문제를 해결하려면 균형 잡힌 접근법이 필요하다.",
+            quiz: "This _____ may be more effective than simply increasing fines.",
+            tip: "solution보다 넓게, 문제를 다루는 방식 전체를 가리킵니다.",
             level: "B2"
         }
     ],
     [
         {
-            word: "consistent",
-            pronunciation: "kun-SIS-tunt",
-            meaning: "일관된, 꾸준한",
-            example: "Consistent practice makes difficult words feel familiar.",
-            translation: "꾸준한 연습은 어려운 단어를 익숙하게 만든다.",
-            tip: "행동이나 품질이 흔들리지 않을 때 씁니다.",
-            level: "B1"
-        },
-        {
-            word: "evaluate",
-            pronunciation: "ih-VAL-yoo-ayt",
-            meaning: "평가하다",
-            example: "Evaluate each source before you trust the information.",
-            translation: "정보를 믿기 전에 각 출처를 평가하라.",
-            tip: "단순히 보다가 아니라 기준을 두고 판단한다는 뜻입니다.",
+            word: "assess",
+            pronunciation: "uh-SES",
+            meaning: "평가하다, 판단하다",
+            example: "Researchers assess the impact of screen time on children's sleep.",
+            translation: "연구자들은 화면 사용 시간이 아이들의 수면에 미치는 영향을 평가한다.",
+            quiz: "Examiners _____ whether an essay answers the question directly.",
+            tip: "IELTS 채점, 연구, 정책 효과를 판단할 때 자주 나오는 동사입니다.",
             level: "B2"
         },
         {
-            word: "practical",
-            pronunciation: "PRAK-ti-kul",
-            meaning: "실용적인, 현실적인",
-            example: "This guide gives practical examples for daily study.",
-            translation: "이 가이드는 매일 공부할 수 있는 실용적인 예를 제공한다.",
-            tip: "실제로 사용할 수 있는 해결책에 잘 어울립니다.",
-            level: "B1"
+            word: "impact",
+            pronunciation: "IM-pakt",
+            meaning: "영향, 충격",
+            example: "Tourism has a strong impact on local employment.",
+            translation: "관광은 지역 고용에 큰 영향을 미친다.",
+            quiz: "The long-term _____ of climate change is difficult to predict.",
+            tip: "effect보다 강한 영향을 표현할 때 쓰며, 명사와 동사로 모두 가능합니다.",
+            level: "B2"
+        },
+        {
+            word: "sustainable",
+            pronunciation: "suh-STAY-nuh-bl",
+            meaning: "지속 가능한",
+            example: "Cities need sustainable transport systems to reduce emissions.",
+            translation: "도시는 배출량을 줄이기 위해 지속 가능한 교통 시스템이 필요하다.",
+            quiz: "Many countries are investing in _____ farming methods.",
+            tip: "환경, 경제, 도시 계획 주제에서 매우 자주 쓰입니다.",
+            level: "B2"
         },
         {
             word: "evidence",
             pronunciation: "EV-i-dens",
             meaning: "증거, 근거",
-            example: "Good writing supports every claim with evidence.",
-            translation: "좋은 글은 모든 주장에 근거를 붙인다.",
-            tip: "의견과 사실을 구분할 때 자주 등장합니다.",
+            example: "Strong evidence is essential in academic writing.",
+            translation: "학술적 글쓰기에서는 강한 근거가 필수적이다.",
+            quiz: "Without enough _____, the argument sounds like a personal opinion.",
+            tip: "주장을 뒷받침하는 자료나 사례를 말할 때 사용합니다.",
             level: "B1"
         },
         {
-            word: "improve",
-            pronunciation: "im-PROOV",
-            meaning: "개선하다, 나아지다",
-            example: "You can improve your reading speed by reviewing key words.",
-            translation: "핵심 단어를 복습하면 읽기 속도를 개선할 수 있다.",
-            tip: "사람의 실력과 제품 품질 모두에 씁니다.",
-            level: "A2"
+            word: "fluctuate",
+            pronunciation: "FLUK-choo-ayt",
+            meaning: "변동하다, 오르내리다",
+            example: "Fuel prices tend to fluctuate throughout the year.",
+            translation: "연료 가격은 일 년 내내 변동하는 경향이 있다.",
+            quiz: "The unemployment rate may _____ during periods of economic change.",
+            tip: "Task 1 그래프에서 수치가 계속 오르내릴 때 정확한 동사입니다.",
+            level: "C1"
         }
     ],
     [
         {
-            word: "relevant",
-            pronunciation: "REL-uh-vunt",
-            meaning: "관련 있는, 적절한",
-            example: "Choose examples that are relevant to your goal.",
-            translation: "목표와 관련 있는 예문을 선택하라.",
-            tip: "주제와 직접 연결될 때 쓰며 important와 다릅니다.",
-            level: "B1"
+            word: "interpret",
+            pronunciation: "in-TUR-prit",
+            meaning: "해석하다, 이해하다",
+            example: "Students must interpret data before writing a clear summary.",
+            translation: "학생들은 명확한 요약을 쓰기 전에 데이터를 해석해야 한다.",
+            quiz: "It is important to _____ the chart before describing the trend.",
+            tip: "그래프, 통계, 연구 결과를 읽고 의미를 파악할 때 씁니다.",
+            level: "B2"
         },
         {
-            word: "avoid",
-            pronunciation: "uh-VOID",
-            meaning: "피하다",
-            example: "Avoid memorizing long lists without examples.",
-            translation: "예문 없이 긴 목록을 외우는 것은 피하라.",
-            tip: "나쁜 결과를 만들 수 있는 행동을 하지 않는다는 뜻입니다.",
-            level: "A2"
+            word: "allocate",
+            pronunciation: "AL-uh-kayt",
+            meaning: "배분하다, 할당하다",
+            example: "Schools should allocate more time to practical science lessons.",
+            translation: "학교는 실용적인 과학 수업에 더 많은 시간을 배분해야 한다.",
+            quiz: "The city plans to _____ extra funds to public libraries.",
+            tip: "시간, 예산, 자원을 공식적으로 나눠 배정할 때 사용합니다.",
+            level: "C1"
         },
         {
-            word: "specific",
-            pronunciation: "spi-SIF-ik",
-            meaning: "구체적인, 특정한",
-            example: "Specific feedback is easier to act on.",
-            translation: "구체적인 피드백은 실행하기 더 쉽다.",
-            tip: "general의 반대말로 자주 출제됩니다.",
-            level: "B1"
+            word: "consequence",
+            pronunciation: "KON-si-kwens",
+            meaning: "결과, 영향",
+            example: "A possible consequence of overfishing is damage to marine ecosystems.",
+            translation: "남획의 가능한 결과는 해양 생태계 손상이다.",
+            quiz: "One serious _____ of poor urban planning is longer commuting time.",
+            tip: "나쁜 결과를 말할 때 result보다 격식 있고 논리적으로 들립니다.",
+            level: "B2"
         },
         {
-            word: "benefit",
-            pronunciation: "BEN-uh-fit",
-            meaning: "이점, 이익을 얻다",
-            example: "Learners benefit from seeing a word in several sentences.",
-            translation: "학습자는 단어를 여러 문장에서 볼 때 이점을 얻는다.",
-            tip: "명사와 동사로 모두 쓰입니다.",
-            level: "B1"
+            word: "indicate",
+            pronunciation: "IN-di-kayt",
+            meaning: "나타내다, 보여 주다",
+            example: "The figures indicate that demand for electric cars is increasing.",
+            translation: "그 수치는 전기차 수요가 증가하고 있음을 보여 준다.",
+            quiz: "These results _____ a clear preference for online shopping.",
+            tip: "Task 1에서 data shows를 반복하지 않게 해 주는 유용한 동사입니다.",
+            level: "B2"
         },
         {
-            word: "accurate",
-            pronunciation: "AK-yur-it",
-            meaning: "정확한",
-            example: "An accurate translation preserves the writer's intent.",
-            translation: "정확한 번역은 글쓴이의 의도를 보존한다.",
-            tip: "맞고 틀림이 중요한 숫자, 정보, 설명에 씁니다.",
-            level: "B1"
+            word: "priority",
+            pronunciation: "pry-OR-uh-tee",
+            meaning: "우선순위",
+            example: "Public health should be a priority when governments plan budgets.",
+            translation: "정부가 예산을 계획할 때 공중 보건은 우선순위가 되어야 한다.",
+            quiz: "For many families, affordable housing is the highest _____.",
+            tip: "무엇을 먼저 처리해야 하는지 말할 때 에세이에 자주 쓰입니다.",
+            level: "B2"
         }
     ]
 ];
@@ -196,7 +211,6 @@ function getOptions(words, answerIndex) {
 function renderQuiz(words) {
     quizResult.textContent = "";
     quizList.innerHTML = words.map((item, index) => {
-        const sentence = item.example.replace(item.word, "_____");
         const options = getOptions(words, index).map((option) => `
             <label class="option">
                 <input type="radio" name="question-${index}" value="${option}">
@@ -206,7 +220,7 @@ function renderQuiz(words) {
 
         return `
             <div class="quiz-item" data-answer="${item.word}">
-                <p>${index + 1}. ${sentence}</p>
+                <p>${index + 1}. ${item.quiz}</p>
                 <div class="options">${options}</div>
             </div>
         `;
